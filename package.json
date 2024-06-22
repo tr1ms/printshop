@@ -1,0 +1,33 @@
+{
+	"name": "printshop",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon src/index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bcrypt": "^5.1.1",
+		"cookie-parser": "^1.4.6",
+		"express": "^4.19.2",
+		"express-session": "^1.18.0",
+		"jsonwebtoken": "^9.0.2",
+		"module-alias": "^2.2.3",
+		"mongoose": "^8.4.3",
+		"passport": "^0.7.0",
+		"passport-local": "^1.0.0"
+	},
+	"_moduleAliases": {
+		"@": "./src",
+		"@routes": "./src/routes",
+		"@controllers": "./src/controllers",
+		"@models": "./src/models",
+		"@utils": "./src/utils",
+		"middleware": "./src/middleware",
+		"db": "./src/db"
+	}
+}
