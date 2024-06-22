@@ -1,33 +1,50 @@
 {
-	"name": "printshop",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "nodemon src/index.js"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"bcrypt": "^5.1.1",
-		"cookie-parser": "^1.4.6",
-		"express": "^4.19.2",
-		"express-session": "^1.18.0",
-		"jsonwebtoken": "^9.0.2",
-		"module-alias": "^2.2.3",
-		"mongoose": "^8.4.3",
-		"passport": "^0.7.0",
-		"passport-local": "^1.0.0"
-	},
-	"_moduleAliases": {
-		"@": "./src",
-		"@routes": "./src/routes",
-		"@controllers": "./src/controllers",
-		"@models": "./src/models",
-		"@utils": "./src/utils",
-		"middleware": "./src/middleware",
-		"db": "./src/db"
-	}
+  "name": "printshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js",
+    "lint": "npx eslint",
+    "lint:fix": "npx eslint --fix",
+    "prettier:write": "npx prettier . --write",
+    "prettier:check": "npx prettier . --check",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "mongoose": "^8.4.3",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
+  },
+  "_moduleAliases": {
+    "@": "./src",
+    "@routes": "./src/routes",
+    "@controllers": "./src/controllers",
+    "@models": "./src/models",
+    "@utils": "./src/utils",
+    "middleware": "./src/middleware",
+    "db": "./src/db"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.5.0",
+    "eslint": "^9.5.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.6.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "3.3.2"
+  }
 }
